@@ -1,99 +1,261 @@
-.hidden {
-    display: none;
+/* 초기화 코드 */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-
-*{
-    box-sizing: border-box;
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
-body{
-    padding-top:300px;
-    font-family: 'Baloo Tammudu 2', 'Noto Sans KR', sans-serif;
-}
-
 body {
-    width: 100vw;
-    height: 100vh;
-    color:rgba(255,255,255,0.6);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-#bgImage{
-    position:absolute;
-    left:0;
-    top:0;
-	max-width:100%;
-    min-width:1880px;;
-    max-height:1400px;
-    min-height:1200px;
-    z-index:-5;
-    filter: brightness(30%);
+/* 시작 */
+body {
+  font-family: "Baloo Tammudu 2", "Noto Sans KR", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/우주.avif");
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(1px);
 }
 
-#login-form{
-    text-align:center;
-    color:white;
-    margin:0 auto;
+.main_div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-#login-form input:first-child{
-    text-align: center;
-    color:white;
-    font-size:1.3rem;
-    padding: 10px;
-    width: 240px;
-    background-color: rgba(255,255,255,0.2);
-    border:none;
-    transition: all, 0.4s;
+#weather {
+  margin: 25px;
 }
-#login-form input:first-child:hover{
-    background-color: rgba(255,255,255,0.4);
+
+.login-box {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
 }
-#login-form input:hover::-webkit-input-placeholder{ /*placeholder color change*/
-    color: rgb(50, 50, 50);
+
+#login-form {
+  color: white;
 }
-#login-form input:first-child:focus{
-    outline:none;
-    border-bottom: 1px solid white;
-    background-color:rgba(0,0,0,0);
+
+#login-form input:first-child {
+  text-align: center;
+  color: rgba(37, 150, 190, 0.6);
+  font-size: 1.3rem;
+  padding: 10px;
+  width: 240px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 20px 20px;
+  transition: all, 0.4s;
 }
-#login-form input:nth-child(2){
-    margin-left:20px;
-    width:100px;
-    height:40px;
-    border-radius: 30px;
-    border:none;
-    background-color:rgba(255,255,255,0.6);
-    color: rgb(80,80,80);
-    font-size:1rem;
-    font-weight: 600;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
-    outline: none;
-    cursor: pointer;
-    transition: all, 0.4s;
+#login-form input:first-child:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
-#login-form input:nth-child(2):hover{
-    background-color:rgba(255,255,255,0.8)
+#login-form input:hover::-webkit-input-placeholder {
+  /*placeholder color change*/
+  color: rgba(37, 150, 190, 1);
 }
-#login-form input:nth-child(2):active{
-    background-color:darkgray;
-    color:white;
-    outline: none;
+#login-form input:first-child:focus {
+  outline: none;
+  border-bottom: 1px solid rgba(37, 150, 190, 0.6);
+  background-color: rgba(0, 0, 0, 0);
 }
-#clock{
-    text-align: center;
-    height:260px;
-    font-size:8rem;
-    margin:10px;
-    color:rgba(255,255,255,0.9);    
-    padding:-100px;
+#login-form input:nth-child(2) {
+  margin-left: 20px;
+  width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: darkgray;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  outline: none;
+  cursor: pointer;
+  transition: all, 0.4s;
 }
-#greeting{
-    margin: 0 auto;
-    text-align:center;
-    color: rgba(255,255,255,0.9);
-    font-weight: 400;
-    font-size:2rem;
-    font-weight: 800;
+#login-form input:nth-child(2):hover {
+  color: rgba(37, 150, 190, 1);
+}
+#login-form input:nth-child(2):active {
+  background-color: darkgray;
+  color: rgba(37, 150, 190, 0.6);
+  outline: none;
+}
+
+#clock {
+  text-align: center;
+  font-size: 7rem;
+  font-weight: 600;
+  color: rgba(37, 150, 190, 0.6);
+  margin: 25px;
+}
+
+#greeting {
+  color: rgba(f, f, f, 0.6);
+  font-size: 1.7rem;
+  margin-top: 20px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+.main_header {
+  height: 38%;
+}
+
+.todo-form {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  height: 30%;
+  margin-right: 40px;
+}
+
+#todo-form input {
+  background-color: rgba(0, 0, 0, 0);
+  width: 200px;
+  border: none;
+  height: 50px;
+  color: rgba(37, 150, 190, 0.8);
+  outline: 0;
+}
+
+#quote {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  height: 30%;
+}
+
+#todo-list {
+  margin-top: 5px;
+  margin-right: 80px;
+}
+#todo-list li {
+  margin: 2px;
+}
+#todo-list button {
+  background-color: rgba(37, 150, 190, 0.7);
+  margin-left: 10px;
+  border-radius: 70%;
+  height: 29px;
+  margin-top: 10px;
 }

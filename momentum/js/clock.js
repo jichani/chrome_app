@@ -9,4 +9,4 @@ function getClock() {
 }
 
 getClock(); // 이게 없다면 처음엔 시간이 없다가 1초 뒤에 시간이 나타난다.
-setInterval(getClock, 1000); // 정한시간인 1000ms(1s)마다 getClock() function을 실행한다. 시간 업데이트 
+setInterval(getClock, 1000); // 정한시간인 1000ms(1s)마다 getClock() function을 실행한다. 시간 업데이트 ffdffdsfdsfds

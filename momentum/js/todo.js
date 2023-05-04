@@ -6,7 +6,7 @@ const TODOS_KEY = "todos";
 
 let toDos = [];
 
-function saveToDos(){
+function saveToDos() {
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos)); //but, localStorage에는 배열이 아닌 string만 저장이 된다. 배열같이 저장을 해 둔다.
 }
 
@@ -35,8 +35,8 @@ function handleToDoSubmit(event) {
     const newTodo = toDoInput.value;
     toDoInput.value = "";
     const newTodoOBj = {
-        text:newTodo,
-        id:Date.now() //id값을 집어넣어서 구분이 가능하게 만들어준다.
+        text: newTodo,
+        id: Date.now() //id값을 집어넣어서 구분이 가능하게 만들어준다.
     }
     toDos.push(newTodoOBj);
     paintToDo(newTodoOBj);

@@ -11,4 +11,4 @@
 
 // const pickedImageNumber = Math.floor(Math.random() * images.length);
 
-document.body.style.backgroundImage = `url(https://cdn.pixabay.com/photo/2018/09/02/07/07/south-korea-3648252_960_720.jpg)`;
+// document.body.style.backgroundImage = `url(https://cdn.pixabay.com/photo/2018/09/02/07/07/south-korea-3648252_960_720.jpg)`;
